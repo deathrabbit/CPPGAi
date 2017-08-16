@@ -15,4 +15,8 @@ This technique has the benefit of being able to multithread asynchronously and m
 
 This could be solved by utilizing multiple populations in a coarse-grained parallel method and allow each population to converge on their own solution.  Each population would have a set of similar chromosomes that could triangulate to a solution.  Instead, I opted for a direct solution if not a pure one.  The optimization option is a steepest-hill-climb algorithm.  It takes a certain percentage of genes and uses brute-force to find the best fitness.
 
+Screenshots
+
 ![alt text](https://raw.githubusercontent.com/deathrabbit/CPPGAi/master/screenshots/CPPGAi_Home.jpg)
+
+![alt text](https://raw.githubusercontent.com/deathrabbit/CPPGAi/master/screenshots/CPPGAi_Crossover.jpg)
