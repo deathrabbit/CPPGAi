@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import CPPGAi.TextFieldRestrict?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CPPGAi.Controller">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+         <Tab fx:id="tabBodyLiveResults_" closable="false">
+            <ScrollPane fx:id="scrollPaneLiveResults_">
+               <TextArea fx:id="textAreaLiveResults_" prefHeight="200.0" prefWidth="200.0" />
+            </ScrollPane>
+         </Tab>
+         <Tab fx:id="tabBodyGetResults_">
+            <ScrollPane fx:id="scrollPaneGetResults_">
+               <TextArea fx:id="textAreaGetResults_" prefHeight="200.0" prefWidth="200.0" />
+            </ScrollPane>
+         </Tab>
+      </TabPane>
+   </center>
+   <top>
+      <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+         <Tab fx:id="tabHeaderHome_" closable="false">
+            <HBox>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox>
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <ToggleButton fx:id="toggleButtonPopulate_" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPopulate" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="toggleButtonEvolution_" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEvolution">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </ToggleButton>
+               </VBox>
+               <VBox>
+                  <Label fx:id="labelTimer_">
+                     <VBox.margin>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldTimer_" alignment="CENTER_RIGHT">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="4.0" />
+                     </VBox.margin>
+                  </TextField>
+               </VBox>
+               <VBox>
+                  <Label fx:id="labelFileName_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldFile_">
+                     <VBox.margin>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="buttonSaveFile_" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSaveFile">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+               </VBox>
+               <VBox>
+                  <Button fx:id="buttonSaveAsFile_" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSaveAsFile">
+                     <VBox.margin>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonNewFile_" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNewFile">
+                     <VBox.margin>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonOpenFile_" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOpenFile">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+               </VBox>
+            </HBox>
+         </Tab>
+         <Tab fx:id="tabHeaderPopulation_" closable="false">
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox>
+                  <Label fx:id="labelGeneSize_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelRangeGeneSize_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFieldRestrict fx:id="textFieldGeneSize_">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextFieldRestrict>
+               </VBox>
+               <VBox>
+                  <Label fx:id="labelChromosomeSize_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelRangeChromosomeSize_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFieldRestrict fx:id="textFieldChromosomeSize_">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextFieldRestrict>
+               </VBox>
+               <VBox>
+                  <Label fx:id="labelPopulationSize_">
+                     <padding>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="labelRangePopulationSize_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFieldRestrict fx:id="textFieldPopulationSize_">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextFieldRestrict>
+               </VBox>
+               <VBox>
+                  <ToggleButton fx:id="toggleButtonPopulationLock_" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPopulationUnlock">
+                     <VBox.margin>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </ToggleButton>
+                  <ToggleButton fx:id="toggleButtonPopulationResize_" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPopulationResize">
+                     <VBox.margin>
+                        <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                     </VBox.margin>
+                  </ToggleButton>
+                  <Button fx:id="buttonPopulationRevert_" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPopulationRevert">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+               </VBox>
+            </HBox>
+         </Tab>
+         <Tab fx:id="tabHeaderCrossover_" closable="false">
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox>
+                  <Label fx:id="labelCrossoverType_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radioButtonCrossoverUniform_" mnemonicParsing="false" onAction="#offCustomCrossover">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="radioButtonCrossoverSingle_" mnemonicParsing="false" onAction="#offCustomCrossover">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="radioButtonCrossoverTwo_" mnemonicParsing="false" onAction="#offCustomCrossover">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="radioButtonCrossoverCustom_" mnemonicParsing="false" onAction="#onCustomCrossover">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </RadioButton>
+               </VBox>
+               <VBox>
+                  <Label fx:id="labelCustomCrossover_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelCustomCrossoverRange1_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelCustomCrossoverRange2_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFieldRestrict fx:id="textFieldCustomCrossover_">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextFieldRestrict>
+               </VBox>
+               <VBox>
+                  <Label fx:id="labelMutation_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelRangeMutation_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelHelpMutation_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFieldRestrict fx:id="textFieldMutation_">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextFieldRestrict>
+               </VBox>
+               <VBox>
+                  <Label fx:id="labelOptimization_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelRangeOptimization_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelHelpOptimization_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFieldRestrict fx:id="textFieldOptimization_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextFieldRestrict>
+               </VBox>
+            </HBox>
+         </Tab>
+         <Tab fx:id="tabHeaderResults_" closable="false">
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox>
+                  <CheckBox fx:id="checkBoxLiveGetPopulation_" mnemonicParsing="false" onAction="#onCheckBoxLivePopulation">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <Label fx:id="labelLiveGetPopulation_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelRangeLiveGetPopulation_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFieldRestrict fx:id="textFieldLiveGetPopulation_">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextFieldRestrict>
+               </VBox>
+               <VBox>
+                  <ToggleButton fx:id="toggleButtonPrintPopulation_" mnemonicParsing="false" onAction="#onPrintPopulation">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </ToggleButton>
+                  <Label fx:id="labelPrintPopulation_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="labelRangePrintPopulation_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFieldRestrict fx:id="textFieldPrintPopulation_">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextFieldRestrict>
+               </VBox>
+               <VBox>
+                  <Label fx:id="labelStandardDeviation_">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ToggleButton fx:id="toggleButtonStandardDeviation_" mnemonicParsing="false" onAction="#onStandardDeviation">
+                     <VBox.margin>
+                        <Insets bottom="2.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </ToggleButton>
+                  <TextField fx:id="textFieldStandardDeviation_">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="2.0" />
+                     </VBox.margin>
+                  </TextField>
+               </VBox>
+            </HBox>
+         </Tab>
+      </TabPane>
+   </top>
+</BorderPane>
